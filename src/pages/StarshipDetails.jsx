@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getDetails } from "../services/sw-api";
 import { Link } from "react-router-dom";
+import { Card } from 'react-bootstrap'
 
 const StarshipDetails = () => {
   const [starshipDetails, setStartshipDetails] = useState ({})
@@ -17,13 +18,23 @@ const StarshipDetails = () => {
 
   return (
     <>
-      <h2>Starship Details</h2>
-        {starshipDetails.name ?
-      <>
-      <h2>Name: {starshipDetails.name}</h2>
-      <h2>Model: {starshipDetails.model}</h2>
-      <Link to='/'>Return</Link>
-      </>
+      <div className="App-header">
+        <nav>Starship Details</nav>
+      </div>
+      {starshipDetails.name ?
+        <Card style={{display: 'flex', justifyContent: 'center'}}>
+         <div className='starship-display'>
+          <Card.Body>
+            <h2>NAME: {starshipDetails.name}</h2>
+            <h2>MODEL: {starshipDetails.model}</h2>
+            <Link 
+            to='/'
+            className="starship-link2"
+            >Return
+            </Link>
+          </Card.Body>
+        </div>
+       </Card>
     :
     <>
       <h2>LOADING</h2>

@@ -22,10 +22,10 @@ const StarshipList = () => {
       </div>
       
         {starshipsList.length ?
-            <Card style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+            <Card style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
           {starshipsList.map(starship => 
             <div className='starship-card'>
-              <Card.Body >
+              <Card.Body>
                 <Link 
                 key={starship.name} 
                 state={{starship}} 

@@ -14,11 +14,9 @@
 }
 
 
-
 .starship-card{
   text-align:center;
-
-  background-color: rgb(133, 53, 53);
+  background-color: rgba(31, 72, 64, 0.845);
   margin: 3vw;
   width: 20vw;
   height: 15vh;
@@ -27,5 +25,27 @@
 
 .starship-link{
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.starship-link:hover{
+color: black;
+}
+
+.starship-display{
+  background-color: rgba(31, 72, 64, 0.845);
+  margin: auto;
+  margin-top: 30vh;
+  color: white;
+  line-height: 30px;
+}
+
+h2{
+letter-spacing: 2px;
+padding: 5px;
+}
+
+.starship-link2{
+  text-decoration: none;
+  color: white;
 }
