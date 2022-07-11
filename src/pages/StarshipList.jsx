@@ -20,20 +20,24 @@ const StarshipList = () => {
       <div className="App-header">
         <nav>Starship List</nav>
       </div>
+      
         {starshipsList.length ?
-          <div className='starship-container'>
-            <Card>
+            <Card style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
           {starshipsList.map(starship => 
             <div className='starship-card'>
-              <Card.Body>
-                <Link key={starship.name} state={{starship}} to='/starships'>
+              <Card.Body >
+                <Link 
+                key={starship.name} 
+                state={{starship}} 
+                to='/starships'
+                className="starship-link"
+                >
                   {starship.name}
                 </Link>
             </Card.Body>
           </div>
           )}
           </Card>
-        </div>
     :
     <>
     <h2>No Starships</h2>
